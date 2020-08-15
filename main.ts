@@ -5,7 +5,7 @@ namespace Keyboard {
      * keyboard so you can write on screen
      */
     //% blockId=textkey block="Keyboard"
-    export function textkey(save: string) : string {
+    export function textkey(save: string) : void {
         
     }
 }
