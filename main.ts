@@ -1,4 +1,7 @@
 
+/**
+ * keyboards and text settings, so you can do what you want with your text
+ */
 //%icon="\uf11c" color=#0344ab weight=95
 //% groups='["keyboards", "Text Settings"]'
 namespace Keyboard {
@@ -41,7 +44,7 @@ namespace Keyboard {
      * @param speed change the speed by negative and positive
      * 
      */
-    //% blockId=setspeed block="set speed to $speed \\%"
+    //% blockId=setspeed block="set scroll speed to $speed \\%"
     //% speed.shadow="speedPicker"
     //% group="Text Settings"
     export function textspeed(speed: number): void {
