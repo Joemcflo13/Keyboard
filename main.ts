@@ -1,6 +1,6 @@
 
 //%icon="\uf11c" color=#0344ab weight=95
-//% groups='["keyboards"]'
+//% groups='["keyboards", "Text Settings"]'
 namespace Keyboard {
     /**
      * @param prompt this is my parameter, eg: "WHAT DO YOU WANT TO ASK?"
@@ -35,5 +35,16 @@ namespace Keyboard {
     //% group="keyboards"
     export function slang(slang: string): void {
         basic.showString("Sup")
+    }
+    /**
+     * change how fast the string speed is
+     * @param speed change the speed by negative and positive
+     * 
+     */
+    //% blockId=setspeed block="set speed to $speed \\%"
+    //% speed.shadow="speedPicker"
+    //% group="Text Settings"
+    export function textspeed(speed: number): void {
+        textspeed(__internal.__speedPicker(speed))
     }
 }
