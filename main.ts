@@ -2,10 +2,17 @@
 //%icon="\f11c" color=#0344ab weight=2
 namespace Keyboard {
     /**
-     * keyboard so you can write on screen
+     * keyboard so you can write on screen with a prompt
      */
-    //% blockId=textkey block="Keyboard"
-    export function textkey(save: string) : void {
+    //% blockId=textkeyboard block="Keyboard with prompt: $prompt"
+    export function textkey(prompt: string) : void {
+        
+    }
+    /**
+     * keyboard so you can write on screen without a prompt
+     */
+    //% blockId=justkeyboard block="Keyboard"
+    export function justkey() : void {
         
     }
 }
