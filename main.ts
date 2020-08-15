@@ -12,10 +12,10 @@ namespace Keyboard {
         basic.showString(prompt)
         basic.showString("A")
         if (input.buttonIsPressed(Button.A)) {
-            let Letter: string "A"
+            let Letter: string="A"
             return Letter;
         } else {
-            let Letter: string "B"
+            let Letter: string="B"
             return Letter
         }
         
