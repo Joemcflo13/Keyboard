@@ -6,7 +6,7 @@ namespace Keyboard {
      */
     //% blockId=textkeyboard block="Keyboard with prompt: $prompt"
     export function textkey(prompt: string) : void {
-        
+        basic.showString(prompt)
     }
     /**
      * keyboard so you can write on screen without a prompt
