@@ -11,7 +11,7 @@ namespace Keyboard {
      */
     //% blockId=textkeyboard block="Keyboard with prompt: $prompt"
     //% group="keyboards"
-    export function textkey(prompt: string): void {
+    export function textkey(prompt: string): string {
         basic.showString(prompt)
         basic.showString("A")
         if (input.buttonIsPressed(Button.A)) {
@@ -28,16 +28,17 @@ namespace Keyboard {
      */
     //% blockId=justkeyboard block="Keyboard"
     //% group="keyboards"
-    export function justkey(): void {
-        
+    export function justkey(): string {
+        let Letter: string="A"
+        retrun Letter
     }
     /**
      * keyboard with slang, or phrase, to help you, so if you have radio on you could send a text with a phrase.
      */
     //% blockId=slang block="slang keyboard"
     //% group="keyboards"
-    export function slang(slang: string): void {
-        basic.showString("Sup")
+    export function slang(slang: string): string {
+        let list = ["SUP", "YEET", "YO", "COOL BEANS"]
     }
     /**
      * change how fast the string speed is

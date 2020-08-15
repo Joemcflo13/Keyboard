@@ -1,6 +1,25 @@
 
 > Open this page at [https://joemcflo13.github.io/extention-again/](https://joemcflo13.github.io/extention-again/)
 
+## Usage (how to use)
+
+### keyboard
+
+Put this block in a string statement and you can write directly from the microbit
+
+``` blocks
+serial.writeString(Keyboard.textkey("what is your favorite color?"))
+basic.showString(Keyboard.textkey("say something"))
+```
+
+### Set Speed
+
+Don't like the scroll speed of the strings? well you can change that now.
+
+``` blocks
+Keyboard.textspeed(__internal.__speedPicker(50))
+```
+
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
@@ -18,12 +37,6 @@ To edit this repository in MakeCode.
 * click on **Import** then click on **Import URL**
 * paste **https://github.com/joemcflo13/extention-again** and click import
 
-## Blocks preview
-
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
-
-![A rendered view of the blocks](https://github.com/joemcflo13/extention-again/raw/master/.github/makecode/blocks.png)
 
 #### Metadata (used for search, rendering)
 
