@@ -3,7 +3,8 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*"
+        "radio": "*",
+        "Starterkit": "github:joemcflo13/elecfreaks-starter-kit#master"
     },
     "files": [
         "main.ts",
