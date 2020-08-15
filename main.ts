@@ -1,5 +1,5 @@
 
-//%icon="\f044" color=#0344ab weight=2
+//%icon="\f11c" color=#0344ab weight=2
 namespace Keyboard {
     /**
      * keyboard so you can write on screen
