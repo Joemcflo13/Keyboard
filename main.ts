@@ -30,7 +30,7 @@ namespace Keyboard {
     //% group="keyboards"
     export function justkey(): string {
         let Letter: string="A"
-        retrun Letter
+        retrun Letter;
     }
     /**
      * keyboard with slang, or phrase, to help you, so if you have radio on you could send a text with a phrase.
