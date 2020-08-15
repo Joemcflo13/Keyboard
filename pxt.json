@@ -2,9 +2,7 @@
     "name": "extention again",
     "description": "",
     "dependencies": {
-        "core": "*",
-        "radio": "*",
-        "Starterkit": "github:joemcflo13/elecfreaks-starter-kit#master"
+        "core": "*"
     },
     "files": [
         "main.ts",
