@@ -30,7 +30,7 @@ namespace Keyboard {
     //% group="keyboards"
     export function justkey(): string {
         let Letter: string="A"
-        retrun Letter;
+        return Letter;
     }
     /**
      * keyboard with slang, or phrase, to help you, so if you have radio on you could send a text with a phrase.
@@ -38,7 +38,9 @@ namespace Keyboard {
     //% blockId=slang block="slang keyboard"
     //% group="keyboards"
     export function slang(slang: string): string {
-        let list = ["SUP", "YEET", "YO", "COOL BEANS"]
+        let List = ["SUP", "YEET", "YO", "COOL BEANS"]
+        let Letter: string="A"
+        return Letter;
     }
     /**
      * change how fast the string speed is
