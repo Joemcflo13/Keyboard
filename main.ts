@@ -21,7 +21,6 @@ namespace Keyboard {
             let Letter: string="B"
             return Letter
         }
-        
     }
     /**
      * keyboard so you can write on screen without a prompt
@@ -53,5 +52,6 @@ namespace Keyboard {
     //% color=#3251a6
     export function textspeed(speed: number): void {
         textspeed(__internal.__speedPicker(speed))
+        speed
     }
 }
