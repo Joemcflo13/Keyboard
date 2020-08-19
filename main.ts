@@ -16,11 +16,28 @@ namespace Keyboard {
         basic.showString("A")
         while (true) {
             if (input.buttonIsPressed(Button.A)) {
-            let Letter: string="A"
-            return Letter;
-            } else {
-            let Letter: string="B"
-            return Letter
+                let Letter: string="A"
+                return Letter;
+            } else if (input.buttonIsPressed(Button.B)) {
+                basic.showString("B")
+                while (true) {
+                    if (input.buttonIsPressed(Button.A)) {
+                        let Letter: string="B"
+                        return Letter
+                    } else if (input.buttonIsPressed(Button.B)) {
+                        basic.showString("C")
+                        while (true) {
+                            if (input.buttonIsPressed(Button.A)) {
+                                let Letter: string="C"
+                                return Letter
+                            } else if (input.buttonIsPressed(Button.B)) {
+                                basic.showString("D")
+                                
+                            }
+                        }
+                    }
+
+            }
             }
         }
     }
