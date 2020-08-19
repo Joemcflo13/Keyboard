@@ -5,7 +5,8 @@
 
 ### keyboard
 
-Put this block in a string statement and you can write directly from the microbit
+Put this block in a string statement and you can write directly from the microbit. Press A to say that this is your letter. Press B to say that this is not, and continue the keyboard.
+It is a lot of work, but you can get there.
 
 ``` blocks
 serial.writeString(Keyboard.textkey("what is your favorite color?"))

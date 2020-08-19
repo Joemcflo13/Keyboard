@@ -7,19 +7,21 @@
 namespace Keyboard {
     /**
      * @param prompt this is my parameter, eg: "WHAT DO YOU WANT TO ASK?"
-     * keyboard so you can write on screen with a prompt, when the letter pops up that you need to use, press a.
+     * keyboard so you can write on screen with a prompt, when the letter pops up that you need to use, press a. Press b for the next letter.
      */
     //% blockId=textkeyboard block="Keyboard with prompt: $prompt"
     //% group="keyboards"
     export function textkey(prompt: string): string {
         basic.showString(prompt)
         basic.showString("A")
-        if (input.buttonIsPressed(Button.A)) {
+        while (true) {
+            if (input.buttonIsPressed(Button.A)) {
             let Letter: string="A"
             return Letter;
-        } else {
+            } else {
             let Letter: string="B"
             return Letter
+            }
         }
     }
     /**
@@ -51,7 +53,6 @@ namespace Keyboard {
     //% group="Text Settings"
     //% color=#3251a6
     export function textspeed(speed: number): void {
-        textspeed(__internal.__speedPicker(speed))
-        speed
+        
     }
 }
