@@ -33,7 +33,7 @@ Don't like the scroll speed of the strings? well you can change that now.
 Keyboard.textspeed(__internal.__speedPicker(50))
 ```
 
-## Use as Extension
+## Use as Extension ![Build status badge](https://github.com/joemcflo13/extention-again/workflows/MakeCode/badge.svg)
 
 This repository can be added as an **extension** in MakeCode.
 
@@ -41,14 +41,6 @@ This repository can be added as an **extension** in MakeCode.
 * click on **New Project**
 * click on **Extensions** under the gearwheel menu
 * search for **https://github.com/joemcflo13/extention-again** and import
-
-## Edit this project ![Build status badge](https://github.com/joemcflo13/extention-again/workflows/MakeCode/badge.svg)
-
-To edit this repository in MakeCode.
-
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/joemcflo13/extention-again** and click import
 
 
 #### Metadata (used for search, rendering)
