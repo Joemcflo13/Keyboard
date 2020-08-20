@@ -131,7 +131,79 @@ namespace Keyboard {
                                                                                                             } else if (input.buttonIsPressed(Button.B)) {
                                                                                                                 basic.showString("N")
                                                                                                                 while (true) {
-                                                                                                                    
+                                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                                        let Letter: string="N"
+                                                                                                                        return Letter;
+                                                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                        basic.showString("O")
+                                                                                                                        while (true) {
+                                                                                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                                                                                let Letter: string="O"
+                                                                                                                                return Letter;
+                                                                                                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                                basic.showString("P")
+                                                                                                                                while (true) {
+                                                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                                                        let Letter: string="P"
+                                                                                                                                        return Letter;
+                                                                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                                        basic.showString("Q")
+                                                                                                                                        while (true) {
+                                                                                                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                                                                                                let Letter: string="Q"
+                                                                                                                                                return Letter;
+                                                                                                                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                                                basic.showString("R")
+                                                                                                                                                while (true) {
+                                                                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                                                                        let Letter: string="R"
+                                                                                                                                                        return Letter;
+                                                                                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                                                        basic.showString("S")
+                                                                                                                                                        while (true) {
+                                                                                                                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                                                                                                                let Letter: string="S"
+                                                                                                                                                                return Letter;
+                                                                                                                                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                                                                basic.showString("T")
+                                                                                                                                                                while (true) {
+                                                                                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                                                                                        let Letter: string="T"
+                                                                                                                                                                        return Letter;
+                                                                                                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                                                                        basic.showString("U")
+                                                                                                                                                                        while (true) {
+                                                                                                                                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                                                                                                                                let Letter: string="U"
+                                                                                                                                                                                return Letter;
+                                                                                                                                                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                                                                                basic.showString("V")
+                                                                                                                                                                                while (true) {
+                                                                                                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                                                                                                        let Letter: string="V"
+                                                                                                                                                                                        return Letter;
+                                                                                                                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                                                                                        basic.showString("W")
+                                                                                                                                                                                        while (true) {
+                                                                                                                                                                                            
+                                                                                                                                                                                        }
+                                                                                                                                                                                    }
+                                                                                                                                                                                }
+                                                                                                                                                                            }
+                                                                                                                                                                        }
+                                                                                                                                                                    }
+                                                                                                                                                                }
+                                                                                                                                                            }
+                                                                                                                                                        }
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                            }
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    }
                                                                                                                 }
                                                                                                             }
                                                                                                         }
