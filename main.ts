@@ -447,10 +447,14 @@ namespace Keyboard {
      */
     //% blockId=slang block="slang keyboard"
     //% group="keyboards"
-    export function slang(slang: string): string {
-        let List = ["SUP", "YEET", "YO", "COOL BEANS"]
-        let Letter: string="A"
-        return Letter;
+    export function slang(): string {
+        basic.showString("Yo!")
+        while (true) {
+            if (input.buttonIsPressed(Button.A)) {
+                let Slang: string="Yo!"
+                return Slang;
+            }
+        }
     }
     /**
      * change how fast the string speed is

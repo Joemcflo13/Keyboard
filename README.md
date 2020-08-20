@@ -11,7 +11,15 @@ It is a lot of work, but you can get there.
 ``` blocks
 serial.writeString(Keyboard.textkey("what is your favorite color?"))
 basic.showString(Keyboard.textkey("say something"))
+
+basic.showString(Keyboard.justkey())
+
+basic.showString(Keyboard.textkey(Keyboard.justkey()))
 ```
+
+### Slang keyboard
+
+this is if you need to type fast but you cant type fast. if you need to say something "cool". Or even if you need to say something "cool" fast.
 
 ### Set Speed
 
