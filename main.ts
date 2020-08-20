@@ -18,18 +18,21 @@ namespace Keyboard {
             if (input.buttonIsPressed(Button.A)) {
                 let Letter: string="A"
                 return Letter;
+                basic.clearScreen()
             } else if (input.buttonIsPressed(Button.B)) {
                 basic.showString("B")
                 while (true) {
                     if (input.buttonIsPressed(Button.A)) {
                         let Letter: string="B"
-                        return Letter
+                        return Letter;
+                        basic.clearScreen()
                     } else if (input.buttonIsPressed(Button.B)) {
                         basic.showString("C")
                         while (true) {
                             if (input.buttonIsPressed(Button.A)) {
                                 let Letter: string="C"
-                                return Letter
+                                return Letter;
+                                basic.clearScreen()
                             } else if (input.buttonIsPressed(Button.B)) {
                                 basic.showString("D")
                                 
@@ -47,8 +50,116 @@ namespace Keyboard {
     //% blockId=justkeyboard block="Keyboard"
     //% group="keyboards"
     export function justkey(): string {
-        let Letter: string="A"
-        return Letter;
+        basic.showString("A")
+        while (true) {
+            if (input.buttonIsPressed(Button.A)) {
+                let Letter: string="A"
+                return Letter;
+            } else if (input.buttonIsPressed(Button.B)) {
+                basic.showString("B")
+                while (true) {
+                    if (input.buttonIsPressed(Button.A)) {
+                        let Letter: string="B"
+                        return Letter;
+                    } else if (input.buttonIsPressed(Button.B)) {
+                        basic.showString("C")
+                        while (true) {
+                            if (input.buttonIsPressed(Button.A)) {
+                                let Letter: string="C"
+                                return Letter;
+                            } else if (input.buttonIsPressed(Button.B)) {
+                                basic.showString("D")
+                                while (true) {
+                                    if (input.buttonIsPressed(Button.A)) {
+                                        let Letter: string="D"
+                                        return Letter;
+                                    } else if (input.buttonIsPressed(Button.B)) {
+                                        basic.showString("E")
+                                        while (true) {
+                                            if (input.buttonIsPressed(Button.A)) {
+                                                let Letter: string="E"
+                                                return Letter;
+                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                basic.showString("F")
+                                                while (true) {
+                                                    if (input.buttonIsPressed(Button.A)) {
+                                                        let Letter: string="F"
+                                                        return Letter;
+                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                        basic.showString("G")
+                                                        while (true) {
+                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                let Letter: string="G"
+                                                                return Letter;
+                                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                                basic.showString("H")
+                                                                while (true) {
+                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                        let Letter: string="H"
+                                                                        return Letter;
+                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                        basic.showString("I")
+                                                                        while (true) {
+                                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                                let Letter: string="I"
+                                                                                return Letter;
+                                                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                                                basic.showString("J")
+                                                                                while (true) {
+                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                        let Letter: string="J"
+                                                                                        return Letter;
+                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                        basic.showString("K")
+                                                                                        while (true) {
+                                                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                                                let Letter: string="K"
+                                                                                                return Letter;
+                                                                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                basic.showString("L")
+                                                                                                while (true) {
+                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                        let Letter: string="L"
+                                                                                                        return Letter;
+                                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                        basic.showString("M")
+                                                                                                        while (true) {
+                                                                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                                                                let Letter: string="M"
+                                                                                                                return Letter;
+                                                                                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                basic.showString("N")
+                                                                                                                while (true) {
+                                                                                                                    
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+            }
+            }
+        }
+        basic.clearScreen()
     }
     /**
      * keyboard with slang, or phrase, to help you, so if you have radio on you could send a text with a phrase.
