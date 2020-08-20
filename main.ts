@@ -6,7 +6,7 @@
 //% groups='["keyboards", "Text Settings"]'
 namespace Keyboard {
     /**
-     * @param prompt this is my parameter, eg: "WHAT DO YOU WANT TO ASK?"
+     * @param prompt type what you want to get prompted, eg: "WHAT DO YOU WANT TO ASK?"
      * keyboard so you can write on screen with a prompt, when the letter pops up that you need to use, press a. Press b for the next letter.
      */
     //% blockId=textkeyboard block="Keyboard with prompt: $prompt"
@@ -45,7 +45,8 @@ namespace Keyboard {
         }
     }
     /**
-     * keyboard so you can write on screen without a prompt
+     * @param just this is just a plain keyboard with no prompt or anything, just a sad keyboard.
+     * keyboard so you can write on screen without a prompt. when the letter pops up that you need to use, press a. Press b for the next letter.
      */
     //% blockId=justkeyboard block="Keyboard"
     //% group="keyboards"
