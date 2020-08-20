@@ -443,7 +443,8 @@ namespace Keyboard {
         }
     }
     /**
-     * keyboard with slang, or phrase, to help you, so if you have radio on you could send a text with a phrase.
+     * @param slang this is soooo slanging!
+     * keyboard with slang, or phrase, to help you, so if you have radio on you could send a text with a phrase so you can type faster. Press A to choose, press B to continue.
      */
     //% blockId=slang block="slang keyboard"
     //% group="keyboards"
