@@ -19,7 +19,11 @@ basic.showString(Keyboard.textkey(Keyboard.justkey()))
 
 ### Slang keyboard
 
-this is if you need to type fast but you cant type fast. if you need to say something "cool". Or even if you need to say something "cool" fast.
+this is if you need to type fast but you cant type fast. if you need to say something "cool". Or even if you need to say something "cool" fast.\
+
+``` blocks
+basic.showString(Keyboard.slang())
+```
 
 ### Set Speed
 
