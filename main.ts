@@ -454,6 +454,19 @@ namespace Keyboard {
             if (input.buttonIsPressed(Button.A)) {
                 let Slang: string="Yo!"
                 return Slang;
+            } else if (input.buttonIsPressed(Button.B)) {
+                basic.showString("Sup.")
+                while (true) {
+                    if (input.buttonIsPressed(Button.A)) {
+                        let Slang: string="Sup."
+                        return Slang;
+                    } else if (input.buttonIsPressed(Button.B)) {
+                        basic.showString("Can you hang?")
+                        while (true) {
+                            
+                        }
+                    }
+                }
             }
         }
     }
