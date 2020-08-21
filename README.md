@@ -33,6 +33,30 @@ this is if you need to type fast but you cant type fast. if you need to say some
 basic.showString(Keyboard.slang())
 ```
 
+## y and n prompt #keyboardboolprompt
+
+this block is meant for second chances, if you acesdentaly clicked on something, then maybe you want to make sure you really want to continue.
+
+``` blocks
+input.onButtonPressed(Button.AB, function () {
+    if (Keyboard.boolprompt("DO YOU WANT TO CONTINUE?")) {
+        basic.showString(Keyboard.justkey())
+    }
+})
+```
+
+## y and n no prompt #keyboardbool
+
+this is jus the same block as before, but with no prompt, if you just want them to make sure of something, with out them being aware of what they are doing.
+
+``` blocks
+input.onButtonPressed(Button.AB, function () {
+    if (Keyboard.bool()) {
+        basic.showString(Keyboard.justkey())
+    }
+})
+```
+
 ### Set Speed #keyboardtextspeed
 
 Don't like the scroll speed of the strings? well you can change that now.
