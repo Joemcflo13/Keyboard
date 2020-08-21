@@ -57,7 +57,8 @@ input.onButtonPressed(Button.AB, function () {
 })
 ```
 
-### Set Speed #keyboardtextspeed
+
+## Set Speed #keyboardtextspeed
 
 Don't like the scroll speed of the strings? well you can change that now.
 
