@@ -73,7 +73,7 @@ This repository can be added as an **extension** in MakeCode.
 * open [https://makecode.microbit.org/](https://makecode.microbit.org/)
 * click on **New Project**
 * click on **Extensions** under the gearwheel menu
-* search for **https://github.com/joemcflo13/extention-again** and import
+* search for **https://github.com/joemcflo13/keyboard** and import
 
 
 #### Metadata (used for search, rendering)
