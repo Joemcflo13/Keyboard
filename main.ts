@@ -482,11 +482,16 @@ namespace Keyboard {
         basic.showString("Y")
         while (true) {
             if (input.buttonIsPressed(Button.A)) {
+                basic.clearScreen()
                 return true;
             } else if (input.buttonIsPressed(Button.B)) {
                 basic.showString("N")
                 while (true) {
                     if (input.buttonIsPressed(Button.A)) {
+                        basic.clearScreen()
+                        return false;
+                    } else if (input.buttonIsPressed(Button.B)) {
+                        basic.clearScreen()
                         return false;
                     }
                 }
@@ -503,11 +508,16 @@ namespace Keyboard {
         basic.showString("Y")
         while (true) {
             if (input.buttonIsPressed(Button.A)) {
+                basic.clearScreen()
                 return true;
             } else if (input.buttonIsPressed(Button.B)) {
                 basic.showString("N")
                 while (true) {
                     if (input.buttonIsPressed(Button.A)) {
+                        basic.clearScreen()
+                        return false;
+                    } else if (input.buttonIsPressed(Button.B)) {
+                        basic.clearScreen()
                         return false;
                     }
                 }
