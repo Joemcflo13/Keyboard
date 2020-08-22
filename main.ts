@@ -528,6 +528,34 @@ namespace Keyboard {
     }
     
     /**
+     * @param prompt you can ask a prompt so they know what you want. eg: "WHAT DO YOU WANT TO ASK?"
+     * just Y or N same with the other keyboards, A for Select, B for continue, this block has a prompt.
+     */
+    //% blockId=boolprompt block="Yes no prompt $prom"
+    //% group="keyboards"
+    export function boolprompt(prom: string): boolean {
+        basic.showString(prom)
+        basic.showString("Y")
+        while (true) {
+            if (input.buttonIsPressed(Button.A)) {
+                basic.clearScreen()
+                return true;
+            } else if (input.buttonIsPressed(Button.B)) {
+                basic.showString("N")
+                while (true) {
+                    if (input.buttonIsPressed(Button.A)) {
+                        basic.clearScreen()
+                        return false;
+                    } else if (input.buttonIsPressed(Button.B)) {
+                        basic.clearScreen()
+                        return false;
+                    }
+                }
+            }
+        }
+    }
+
+    /**
      * just Y or N same with the other keyboards, A for Select, B for continue, this block has no prompt. 
      */
     //% blockId=bool block="Yes no boolean"
@@ -553,6 +581,37 @@ namespace Keyboard {
         }
     }
     
+    /**
+     * a keyboard that you can controll by moving the microbit to the left and right.
+     * @param prmpt what would you like to say? eg: "WHAT DO YOU SAY?"
+     */
+    //% blockId:moveprompt block="shake-able keyboard with prompt $prmpt"
+    export function movepromt(prmpt: string): string {
+        basic.showString(prmpt)
+        basic.showString("A")
+        while (true) {
+            if (input.onGesture(Gesture.TiltLeft, function () {
+                let Letter: string="A"
+                return Letter;
+            }))
+            if (input.onGesture(Gesture.TiltRight, function () {
+                basic.showString("B")
+                while (true) {
+                    if (input.onGesture(Gesture.TiltLeft, function () {
+                        let Letter: string="B"
+                        return Letter;
+                    }))
+                    if (input.onGesture(Gesture.Right, function () {
+                        basic.showString("C")
+                        while (true) {
+                            
+                        }
+                    }))
+                }
+            }))
+        }
+    }
+
     /**
      * change how fast the string speed is
      * @param speed change the speed by negative and positive
