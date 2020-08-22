@@ -554,37 +554,6 @@ namespace Keyboard {
     }
     
     /**
-     * a keyboard that you can controll by moving the microbit to the left and right.
-     * @param prmpt what would you like to say? eg: "WHAT DO YOU SAY?"
-     */
-    //% blockId:moveprompt block="shake-able keyboard with prompt $prmpt"
-    export function movepromt(prmpt: string): string {
-        basic.showString(prmpt)
-        basic.showString("A")
-        while (true) {
-            if (input.onGesture(Gesture.TiltLeft, function () {
-                let Letter: string="A"
-                return Letter;
-            }))
-            if (input.onGesture(Gesture.TiltRight, function () {
-                basic.showString("B")
-                while (true) {
-                    if (input.onGesture(Gesture.TiltLeft, function () {
-                        let Letter: string="B"
-                        return Letter;
-                    }))
-                    if (input.onGesture(Gesture.Right, function () {
-                        basic.showString("C")
-                        while (true) {
-                            
-                        }
-                    }))
-                }
-            }))
-        }
-    }
-
-    /**
      * change how fast the string speed is
      * @param speed change the speed by negative and positive
      * @param speed change it by selcting it on the wheel. eg: 0
