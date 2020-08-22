@@ -587,6 +587,7 @@ namespace Keyboard {
      */
     //% blockId=setspeed block="set scroll speed to $speed \\%"
     //% speed.shadow="speedPicker"
+    //% speed.min=-50 speed.max=50
     //% group="Text Settings"
     //% color=#3251a6
     export function textspeed(speed: number): void {
