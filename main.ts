@@ -528,34 +528,6 @@ namespace Keyboard {
     }
     
     /**
-     * @param prompt you can ask a prompt so they know what you want. eg: "WHAT DO YOU WANT TO ASK?"
-     * just Y or N same with the other keyboards, A for Select, B for continue, this block has a prompt.
-     */
-    //% blockId=boolprompt block="Yes no prompt $prom"
-    //% group="keyboards"
-    export function boolprompt(prom: string): boolean {
-        basic.showString(prom)
-        basic.showString("Y")
-        while (true) {
-            if (input.buttonIsPressed(Button.A)) {
-                basic.clearScreen()
-                return true;
-            } else if (input.buttonIsPressed(Button.B)) {
-                basic.showString("N")
-                while (true) {
-                    if (input.buttonIsPressed(Button.A)) {
-                        basic.clearScreen()
-                        return false;
-                    } else if (input.buttonIsPressed(Button.B)) {
-                        basic.clearScreen()
-                        return false;
-                    }
-                }
-            }
-        }
-    }
-
-    /**
      * just Y or N same with the other keyboards, A for Select, B for continue, this block has no prompt. 
      */
     //% blockId=bool block="Yes no boolean"
