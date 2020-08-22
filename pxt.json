@@ -1,7 +1,7 @@
 {
     "name": "keyboard",
     "version": "2.0.3",
-    "description": "",
+    "description": "use this extention to type what you need to say.",
     "dependencies": {
         "core": "*"
     },
