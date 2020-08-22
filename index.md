@@ -1,37 +1,81 @@
-## Welcome to GitHub Pages
+> Open this page at [https://joemcflo13.github.io/Keyboard/](https://joemcflo13.github.io/Keyboard/)
 
-You can use the [editor on GitHub](https://github.com/Joemcflo13/Keyboard/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# blocks by JoemcFlo13
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Usage (how to use)
 
-### Markdown
+### keyboard #keyboardtextkey
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Put this block in a string statement and you can write directly from the microbit. Press A to say that this is your letter. Press B to say that this is not, and continue the keyboard.
+It is a lot of work, but you can get there. with most of these keyboards its best if you put a basic.clearScreen() after it. but the text will go away if you leave it.
 
-```markdown
-Syntax highlighted code block
+``` blocks
+serial.writeString(Keyboard.textkey("what is your favorite color?"))
+basic.showString(Keyboard.textkey("say something"))
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+basic.showString(Keyboard.textkey(Keyboard.justkey()))
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Just the keyboard #keyboardjustkey
 
-### Jekyll Themes
+this block is just a keyboard. no prompt. you can type with it. Press A to select a letter, and press B to choose the next one. it is good to use the clear screen after this one.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Joemcflo13/Keyboard/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+``` blocks
+basic.showString(Keyboard.justkey())
+```
 
-### Support or Contact
+### Slang keyboard #keyboardslang
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+this is if you need to type fast but you cant type fast. if you need to say something "cool". Or even if you need to say something "cool" fast. it is good to use the clear screen after this one also.
+
+``` blocks
+basic.showString(Keyboard.slang())
+```
+
+## y and n prompt #keyboardboolprompt
+
+this block is meant for second chances, if you acesdentaly clicked on something, then maybe you want to make sure you really want to continue.
+
+``` blocks
+input.onButtonPressed(Button.AB, function () {
+    if (Keyboard.boolprompt("DO YOU WANT TO CONTINUE?")) {
+        basic.showString(Keyboard.justkey())
+    }
+})
+```
+
+## y and n no prompt #keyboardbool
+
+this is jus the same block as before, but with no prompt, if you just want them to make sure of something, with out them being aware of what they are doing.
+
+``` blocks
+input.onButtonPressed(Button.AB, function () {
+    if (Keyboard.bool()) {
+        basic.showString(Keyboard.justkey())
+    }
+})
+```
+
+
+## Set Speed #keyboardtextspeed
+
+Don't like the scroll speed of the strings? well you can change that now.
+
+``` blocks
+Keyboard.textspeed(__internal.__speedPicker(50))
+```
+
+## Use as Extension ![Build status badge](https://github.com/joemcflo13/extention-again/workflows/MakeCode/badge.svg)
+
+This repository can be added as an **extension** in MakeCode.
+
+* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
+* click on **New Project**
+* click on **Extensions** under the gearwheel menu
+* search for **https://github.com/joemcflo13/keyboard** and import
+
+
+#### Metadata (used for search, rendering)
+
+* for PXT/microbit
+<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
