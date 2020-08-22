@@ -590,6 +590,6 @@ namespace Keyboard {
     //% group="Text Settings"
     //% color=#3251a6
     export function textspeed(speed: number): void {
-        
+        _py.String.strip()
     }
 }
