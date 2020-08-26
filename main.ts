@@ -610,51 +610,51 @@ namespace Keyboard {
     }
 
     /**
+     * @param l here. eg: "A"
+     * @param le here. eg: "B"
+     * @param lett here. eg: "C"
+     * @param lette here. eg: "D"
+     * @param letter here. eg: "E"
+     * @param letterr here. eg: "F"
+     * @param letterrr here. eg: "G"
      * this block is just for fun, and yeah. just like any other keyboard, A to choose, B to continue in the choosing.
      */
     //% blockId=multilett block="Ask for multiple letters: $l || $le | $Lett | $lette | $letter | $letterr | $letterrr"
-    export function multilett(l: string, le: string, lett: string, lette: string, letter: string, letterr: string, letterrr: string,): void {
+    export function multilett(l: string, le: string, lett: string, lette: string, letter: string, letterr: string, letterrr: string,): string {
         basic.showString(l)
         while (true) {
             if (input.buttonIsPressed(Button.A)) {
-                basic.showString(l)
-                basic.clearScreen()
+                return l;
             } else if (input.buttonIsPressed(Button.B)) {
                basic.showString(le)
                 while (true) {
                     if (input.buttonIsPressed(Button.A)) {
-                        basic.showString(le)
-                        basic.clearScreen()
+                        return le;
                     } else if (input.buttonIsPressed(Button.B)) {
                         basic.showString(le)
                         while (true) {
                             if (input.buttonIsPressed(Button.A)) {
-                                basic.showString(lett)
-                                basic.clearScreen()
+                                return lett;
                             } else if (input.buttonIsPressed(Button.B)) {
                                 basic.showString(lette)
                                 while (true) {
                                     if (input.buttonIsPressed(Button.A)) {
-                                        basic.showString(lette)
-                                        basic.clearScreen()
+                                        return lette;
                                     } else if (input.buttonIsPressed(Button.B)) {
                                         basic.showString(letter)
                                         while (true) {
                                             if (input.buttonIsPressed(Button.A)) {
-                                                basic.showString(letter)
-                                                basic.clearScreen()
+                                                return letter;
                                             } else if (input.buttonIsPressed(Button.B)) {
                                                 basic.showString(letterr)
                                                 while (true) {
                                                     if (input.buttonIsPressed(Button.A)) {
-                                                        basic.showString(letterr)
-                                                        basic.clearScreen()
+                                                        return letterr;
                                                     } else if (input.buttonIsPressed(Button.B)) {
                                                         basic.showString(letterrr)
                                                         while (true) {
                                                             if (input.buttonIsPressed(Button.A)) {
-                                                                basic.showString(letterrr)
-                                                                basic.clearScreen()
+                                                                return letterrr;
                                                             } else {
                                                                 basic.clearScreen()
                                                             }
