@@ -57,6 +57,17 @@ input.onButtonPressed(Button.AB, function () {
 })
 ```
 
+## two letter boolean #keyboardtwolett
+
+this block lets you choose what you want to be true and false. for example if you wanted A to be true, then the B would have to be false. so that means, the first string has to be the letter you want to be true, and the second string to be the letter you want to be false. it is that easy.
+
+``` blocks
+if (Keyboard.twolett("A", "B")) {
+    basic.showString("Yo!")
+} else {
+    basic.showString("Sup!")
+}
+```
 
 ## Set Speed #keyboardtextspeed
 

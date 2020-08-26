@@ -528,7 +528,7 @@ namespace Keyboard {
     }
     
     /**
-     * @param prompt you can ask a prompt so they know what you want. eg: "WHAT DO YOU WANT TO ASK?"
+     * @param prom you can ask a prompt so they know what you want. eg: "WHAT DO YOU WANT TO ASK?"
      * just Y or N same with the other keyboards, A for Select, B for continue, this block has a prompt.
      */
     //% blockId=boolprompt block="Yes no prompt $prom"
@@ -580,6 +580,35 @@ namespace Keyboard {
             }
         }
     }
+
+    /**
+     * asks for two letters, you get to choose, and it will display them in the microbit. One the first letter has to be true, and the second has to be false. same with other keyboards, A to select, B to continue.
+     * @param lett this is the lett for the true statement. eg: "Y"
+     * @param lette this is the lette for the false statement. eg: "N"
+     */
+    //% blockId=twolett block="ask for two letters: $lett | $lette"
+    //% group="keyboards"
+    export function twolett(lett: string, lette: string): boolean {
+        basic.showString(lett)
+        while (true) {
+            if (input.buttonIsPressed(Button.A)) {
+                basic.clearScreen()
+                return true;
+            } else if (input.buttonIsPressed(Button.B)) {
+                basic.showString(lette)
+                while (true) {
+                    if (input.buttonIsPressed(Button.A)) {
+                        basic.clearScreen()
+                        return false;
+                    } else if (input.buttonIsPressed(Button.B)) {
+                        basic.clearScreen()
+                        return false;
+                    }
+                }
+            }
+        }
+    }
+
     /**
      * change how fast the string speed is
      * @param speed change the speed by negative and positive
