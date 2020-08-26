@@ -9,7 +9,7 @@ namespace Keyboard {
      * @param prompt type what you want to get prompted, eg: "WHAT DO YOU WANT TO ASK?"
      * keyboard so you can write on screen with a prompt, when the letter pops up that you need to use, press a. Press b for the next letter.
      */
-    //% blockId=textkeyboard block="Keyboard with prompt: $prompt"
+    //% blockId=textkeyboard block="Keyboard with prompt: $prompt" weight=100
     //% group="keyboards"
     export function textkey(prompt: string): string {
         basic.showString(prompt)
@@ -255,7 +255,7 @@ namespace Keyboard {
      * @param just this is just a plain keyboard with no prompt or anything, just a sad keyboard.
      * keyboard so you can write on screen without a prompt. when the letter pops up that you need to use, press a. Press b for the next letter.
      */
-    //% blockId=justkeyboard block="Keyboard"
+    //% blockId=justkeyboard block="Keyboard" weight=99
     //% group="keyboards"
     export function justkey(): string {
         basic.showString("A")
@@ -500,7 +500,7 @@ namespace Keyboard {
      * @param slang this is soooo slanging!
      * keyboard with slang, or phrase, to help you, so if you have radio on you could send a text with a phrase so you can type faster. Press A to choose, press B to continue.
      */
-    //% blockId=slang block="slang keyboard"
+    //% blockId=slang block="slang keyboard" weight=98
     //% group="keyboards"
     export function slang(): string {
         basic.showString("Yo!")
@@ -531,7 +531,7 @@ namespace Keyboard {
      * @param prom you can ask a prompt so they know what you want. eg: "WHAT DO YOU WANT TO ASK?"
      * just Y or N same with the other keyboards, A for Select, B for continue, this block has a prompt.
      */
-    //% blockId=boolprompt block="Yes no prompt $prom"
+    //% blockId=boolprompt block="Yes no prompt $prom" weight=97
     //% group="keyboards"
     export function boolprompt(prom: string): boolean {
         basic.showString(prom)
@@ -558,7 +558,7 @@ namespace Keyboard {
     /**
      * just Y or N same with the other keyboards, A for Select, B for continue, this block has no prompt. 
      */
-    //% blockId=bool block="Yes no boolean"
+    //% blockId=bool block="Yes no boolean" weight=96
     //% group="keyboards"
     export function bool(): boolean {
         basic.showString("Y")
@@ -586,7 +586,7 @@ namespace Keyboard {
      * @param lett this is the lett for the true statement. eg: "Y"
      * @param lette this is the lette for the false statement. eg: "N"
      */
-    //% blockId=twolett block="ask for two letters: $lett | $lette"
+    //% blockId=twolett block="ask for two letters: $lett | $lette" weight=95
     //% group="keyboards"
     export function twolett(lett: string, lette: string): boolean {
         basic.showString(lett)
