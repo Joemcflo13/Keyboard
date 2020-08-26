@@ -586,7 +586,7 @@ namespace Keyboard {
      * @param lett this is the lett for the true statement. eg: "Y"
      * @param lette this is the lette for the false statement. eg: "N"
      */
-    //% blockId=twolett block="ask for two letters: $lett | $lette" weight=95
+    //% blockId=twolett block="Ask for two letters: $lett | $lette" weight=95
     //% group="keyboards"
     export function twolett(lett: string, lette: string): boolean {
         basic.showString(lett)
@@ -603,6 +603,70 @@ namespace Keyboard {
                     } else if (input.buttonIsPressed(Button.B)) {
                         basic.clearScreen()
                         return false;
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * this block is just for fun, and yeah. just like any other keyboard, A to choose, B to continue in the choosing.
+     */
+    //% blockId=multilett block="Ask for multiple letters: $l || $le | $Lett | $lette | $letter | $letterr | $letterrr"
+    export function multilett(l: string, le: string, lett: string, lette: string, letter: string, letterr: string, letterrr: string,): void {
+        basic.showString(l)
+        while (true) {
+            if (input.buttonIsPressed(Button.A)) {
+                basic.showString(l)
+                basic.clearScreen()
+            } else if (input.buttonIsPressed(Button.B)) {
+               basic.showString(le)
+                while (true) {
+                    if (input.buttonIsPressed(Button.A)) {
+                        basic.showString(le)
+                        basic.clearScreen()
+                    } else if (input.buttonIsPressed(Button.B)) {
+                        basic.showString(le)
+                        while (true) {
+                            if (input.buttonIsPressed(Button.A)) {
+                                basic.showString(lett)
+                                basic.clearScreen()
+                            } else if (input.buttonIsPressed(Button.B)) {
+                                basic.showString(lette)
+                                while (true) {
+                                    if (input.buttonIsPressed(Button.A)) {
+                                        basic.showString(lette)
+                                        basic.clearScreen()
+                                    } else if (input.buttonIsPressed(Button.B)) {
+                                        basic.showString(letter)
+                                        while (true) {
+                                            if (input.buttonIsPressed(Button.A)) {
+                                                basic.showString(letter)
+                                                basic.clearScreen()
+                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                basic.showString(letterr)
+                                                while (true) {
+                                                    if (input.buttonIsPressed(Button.A)) {
+                                                        basic.showString(letterr)
+                                                        basic.clearScreen()
+                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                        basic.showString(letterrr)
+                                                        while (true) {
+                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                basic.showString(letterrr)
+                                                                basic.clearScreen()
+                                                            } else {
+                                                                basic.clearScreen()
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        } 
                     }
                 }
             }
