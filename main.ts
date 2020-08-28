@@ -611,6 +611,9 @@ namespace Keyboard {
 
     /**
      * this block is just like the block befor it, but you can have a promt to it. and like every keyboard, you press a to select, and b to continue.
+     * @param lett1 this is the true statement. eg: "Y"
+     * @param lett2 this is the false statement. eg: "N"
+     * @param prompt this is what ever you want to ask the user. eg: "WHAT DO YOU WANT TO ASK?"
      */
     //% blockId=twolettprompt block="ask for two letters: $lett1 | $lett2 with prompt: $prompt"
     //% group="keyboards" weight=94
