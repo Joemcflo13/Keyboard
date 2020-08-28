@@ -649,7 +649,7 @@ namespace Keyboard {
     //% speed.min=-50 speed.max=50
     //% group="Text Settings"
     //% color=#3251a6
-    export function textspeed(speed: number): void {
-        
+    export function textspeed(speed: number): void {  
+        Keyboard.textspeed(speed)
     }
 }
