@@ -610,255 +610,29 @@ namespace Keyboard {
     }
 
     /**
-     * This block is just for fun. Just like any other keyboard, A to choose, B to continue choosing.
-     * @param l here. eg: "A"
-     * @param le here. eg: "B"
-     * @param lett here. eg: ""
-     * @param lette here. eg: ""
-     * @param letter here. eg: ""
-     * @param letterr here. eg: ""
-     * @param letterrr here. eg: ""
+     * this block is just like the block befor it, but you can have a promt to it. and like every keyboard, you press a to select, and b to continue.
      */
-    //% blockId=multilett block="multiple letters $l $le || $Lett || $lette || $letter || $letterr || $letterrr"
+    //% blockId=twolettprompt block="ask for two letters: $lett1 | $lett2 with prompt: $prompt"
     //% group="keyboards" weight=94
-    export function multilett(l: string, le: string, lett: string, lette: string, letter: string, letterr: string, letterrr: string,): string {
-        if (!(l == "" && le == "")) {
-        basic.showString(l)
+    export function twolettprompt(lett1: string, lett2: string, prompt: string): boolean {
+        basic.showString(prompt)
+        basic.showString(lett1)
         while (true) {
             if (input.buttonIsPressed(Button.A)) {
                 basic.clearScreen()
-                return l;
+                return true;
             } else if (input.buttonIsPressed(Button.B)) {
-               basic.showString(le)
+                basic.showString(lett2)
                 while (true) {
                     if (input.buttonIsPressed(Button.A)) {
                         basic.clearScreen()
-                        return le;
-                        }  
-                    }
-                }
-            }
-        } else if (!(l == "" && le == "" && lett == "")) {
-             basic.showString(l)
-        while (true) {
-            if (input.buttonIsPressed(Button.A)) {
-                basic.clearScreen()
-                return l;
-            } else if (input.buttonIsPressed(Button.B)) {
-               basic.showString(le)
-                while (true) {
-                    if (input.buttonIsPressed(Button.A)) {
-                        basic.clearScreen()
-                        return le;
+                        return false;
                     } else if (input.buttonIsPressed(Button.B)) {
-                        basic.showString(lett)
-                        while (true) {
-                            if (input.buttonIsPressed(Button.A)) {
-                                basic.clearScreen()
-                                return lett;
-                            }
-                        } 
-                    }
-                }
-            }
-        }
-        } else if (!(l == "" && le == "" && lett == "" && lette == "")) {
-            basic.showString(l)
-            while (true) {
-            if (input.buttonIsPressed(Button.A)) {
-                basic.clearScreen()
-                return l;
-            } else if (input.buttonIsPressed(Button.B)) {
-               basic.showString(le)
-                while (true) {
-                    if (input.buttonIsPressed(Button.A)) {
                         basic.clearScreen()
-                        return le;
-                    } else if (input.buttonIsPressed(Button.B)) {
-                        basic.showString(lett)
-                        while (true) {
-                            if (input.buttonIsPressed(Button.A)) {
-                                basic.clearScreen()
-                                return lett;
-                            } else if (input.buttonIsPressed(Button.B)) {
-                                basic.showString(lette)
-                                while (true) {
-                                    if (input.buttonIsPressed(Button.A)) {
-                                        basic.clearScreen()
-                                        return lette;
-                                    }
-                                }
-                            }
-                        } 
+                        return false;
                     }
                 }
             }
-            }
-        } else if (!(l == "" && le == "" && lett == "" && lette == "" && letter == "")) {
-            basic.showString(l)
-            while (true) {
-            if (input.buttonIsPressed(Button.A)) {
-                basic.clearScreen()
-                return l;
-            } else if (input.buttonIsPressed(Button.B)) {
-               basic.showString(le)
-                while (true) {
-                    if (input.buttonIsPressed(Button.A)) {
-                        basic.clearScreen()
-                        return le;
-                    } else if (input.buttonIsPressed(Button.B)) {
-                        basic.showString(lett)
-                        while (true) {
-                            if (input.buttonIsPressed(Button.A)) {
-                                basic.clearScreen()
-                                return lett;
-                            } else if (input.buttonIsPressed(Button.B)) {
-                                basic.showString(lette)
-                                while (true) {
-                                    if (input.buttonIsPressed(Button.A)) {
-                                        basic.clearScreen()
-                                        return lette;
-                                    } else if (input.buttonIsPressed(Button.B)) {
-                                        basic.showString(letter)
-                                        while (true) {
-                                            if (input.buttonIsPressed(Button.A)) {
-                                                basic.clearScreen()
-                                                return letter;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        } 
-                    }
-                }
-            }
-            }
-            }
-             else if (!(l == "" && le == "" && lett == "" && lette == "" && letter == "" && letterr == "")) {
-               basic.showString(l)
-            while (true) {
-            if (input.buttonIsPressed(Button.A)) {
-                basic.clearScreen()
-                return l;
-            } else if (input.buttonIsPressed(Button.B)) {
-               basic.showString(le)
-                while (true) {
-                    if (input.buttonIsPressed(Button.A)) {
-                        basic.clearScreen()
-                        return le;
-                    } else if (input.buttonIsPressed(Button.B)) {
-                        basic.showString(lett)
-                        while (true) {
-                            if (input.buttonIsPressed(Button.A)) {
-                                basic.clearScreen()
-                                return lett;
-                            } else if (input.buttonIsPressed(Button.B)) {
-                                basic.showString(lette)
-                                while (true) {
-                                    if (input.buttonIsPressed(Button.A)) {
-                                        basic.clearScreen()
-                                        return lette;
-                                    } else if (input.buttonIsPressed(Button.B)) {
-                                        basic.showString(letter)
-                                        while (true) {
-                                            if (input.buttonIsPressed(Button.A)) {
-                                                basic.clearScreen()
-                                                return letter;
-                                            } else if (input.buttonIsPressed(Button.B)) {
-                                                basic.showString(letterr)
-                                                while (true) {
-                                                    if (input.buttonIsPressed(Button.A)) {
-                                                        basic.clearScreen()
-                                                        return letterr;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        } 
-                    }
-                }
-            } 
-            }
-        } else if (!(l == "" && le == "" && lett == "" && lette == "" && letter == "" && letterr == "" && letterrr == "")) {
-            basic.showString(l)
-            while (true) {
-            if (input.buttonIsPressed(Button.A)) {
-                basic.clearScreen()
-                return l;
-            } else if (input.buttonIsPressed(Button.B)) {
-               basic.showString(le)
-                while (true) {
-                    if (input.buttonIsPressed(Button.A)) {
-                        basic.clearScreen()
-                        return le;
-                    } else if (input.buttonIsPressed(Button.B)) {
-                        basic.showString(lett)
-                        while (true) {
-                            if (input.buttonIsPressed(Button.A)) {
-                                basic.clearScreen()
-                                return lett;
-                            } else if (input.buttonIsPressed(Button.B)) {
-                                basic.showString(lette)
-                                while (true) {
-                                    if (input.buttonIsPressed(Button.A)) {
-                                        basic.clearScreen()
-                                        return lette;
-                                    } else if (input.buttonIsPressed(Button.B)) {
-                                        basic.showString(letter)
-                                        while (true) {
-                                            if (input.buttonIsPressed(Button.A)) {
-                                                basic.clearScreen()
-                                                return letter;
-                                            } else if (input.buttonIsPressed(Button.B)) {
-                                                basic.showString(letterr)
-                                                while (true) {
-                                                    if (input.buttonIsPressed(Button.A)) {
-                                                        basic.clearScreen()
-                                                        return letterr;
-                                                    } else if (input.buttonIsPressed(Button.B)) {
-                                                        basic.showString(letterrr)
-                                                        while (true) {
-                                                            if (input.buttonIsPressed(Button.A)) {
-                                                                basic.clearScreen()
-                                                                return letterrr;
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        } 
-                    }
-                }
-            } 
-            }
-        } else if (l == "" && le == "") {
-            serial.writeString("Could not find any text on your Multiletter block. please add some text.")
-            return " ";
-        } else if (l == "" && le == "" && lett == "") {
-            serial.writeString("Could not find any text on your Multiletter block. please add some text.")
-            return " ";
-        } else if (l == "" && le == "" && lett == "" && lette == "") {
-            serial.writeString("Could not find any text on your Multiletter block. please add some text.")
-            return " ";
-        } else if (l == "" && le == "" && lett == "" && lette == "" && letter == "") {
-            serial.writeString("Could not find any text on your Multiletter block. please add some text.")
-            return " ";
-        } else if (l == "" && le == "" && lett == "" && lette == "" && letter == "" && letterr == "") {
-            serial.writeString("Could not find any text on your Multiletter block. please add some text.")
-            return " ";
-        } else if (l == "" && le == "" && lett == "" && lette == "" && letter == "" && letterr == "" && letterrr == "") {
-            serial.writeString("Could not find any text on your Multiletter block. please add some text.")
-            return " "
-        } else {
-            return " ";
         }
     }
 
@@ -875,5 +649,4 @@ namespace Keyboard {
     export function textspeed(speed: number): void {
         
     }
-
 }
