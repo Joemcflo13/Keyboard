@@ -640,16 +640,25 @@ namespace Keyboard {
     }
 
     /**
-     * change how fast the string speed is
+     * change how fast the string speed is. the higher it is, the slower it will get.
      * @param speed change the speed by negative and positive
      * @param speed change it by selcting it on the wheel. eg: 0
      */
-    //% blockId=setspeed block="set scroll speed to $speed \\%"
-    //% speed.shadow="speedPicker"
-    //% speed.min=-50 speed.max=50
+    //% blockId=setspeed block="scroll text speed $speed \\% with prompt $prompt"
+    //% speed.min=0 speed.max=900
     //% group="Text Settings"
     //% color=#3251a6
-    export function textspeed(speed: number): void {  
-        Keyboard.textspeed(speed)
+    export function textspeed(speed: number, prompt: string): void {  
+        basic.showString(prompt, speed)
+    }
+
+    /**
+     * 
+     */
+    //% blockId=scrollspeed block="text speed everything to %speed"
+    //% speed.min=0 speed.max=100
+    //% group="Text Settings" color=#3251a6
+    export function scrollspeed(speed: number, => void): void {
+        
     }
 }
