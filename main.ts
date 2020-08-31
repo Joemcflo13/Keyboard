@@ -652,5 +652,14 @@ namespace Keyboard {
         basic.showString(prompt, speed)
     }
 
+    /**
+     * 
+     */
+    //% blockId=scrollspeed block="text speed everything to %speed \\% speed"
+    //% speed.min=0 speed.max=900
+    //% group="Text Settings" color=#3251a6
+    export function scrollspeed(speed: number, handler: () => void): void {
+        
+    }
     
 }
