@@ -3,7 +3,7 @@
  * keyboards and text settings, so you can do what you want with your text
  */
 //%icon="\uf11c" color=#0344ab weight=95
-//% groups='["keyboards", "Text Settings"]'
+//% groups='["keyboards", "Text Settings", "Number keyboards"]'
 namespace Keyboard {
     /**
      * @param prompt type what you want to get prompted, eg: "WHAT DO YOU WANT TO ASK?"
@@ -653,10 +653,14 @@ namespace Keyboard {
     }
 
     /**
-     * 
+     * this is the text scroll, but for numbers, and number keyboards
+     * @param prompt you can choose a number but this is the example. eg: 99
      */
-    //% bockId=stringtextspeed block="scroll speed $speed \\% string $prompt"
-    
+    //% bockId=numberspeed block="scroll speed $speed \\% number $prompt"
+    //% speed.min=0 speed.max=900 group="Text Settings" color=#3251a6
+    export function numberspeed(speed: number, prompt: number): number {
+        return 0;
+    }
 
     /**
      * 
@@ -667,5 +671,11 @@ namespace Keyboard {
     export function scrollspeed(speed: number, handler: () => void): void {
         
     }
-    
+
+    /**
+     * like a keyboard, but with numbers
+     * @param prompt you can ask what you want but here is the example. eg: "WHAT DO YOU WANT TO ASK?"
+     */
+    //% blockId=numkeyboardprompt block="Number keyboard with prompt: $prompt"
+
 }
