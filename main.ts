@@ -655,6 +655,12 @@ namespace Keyboard {
     /**
      * 
      */
+    //% bockId=stringtextspeed block="scroll speed $speed \\% string $prompt"
+    
+
+    /**
+     * 
+     */
     //% blockId=scrollspeed block="text speed everything to %speed \\% speed"
     //% speed.min=0 speed.max=900
     //% group="Text Settings" color=#3251a6
