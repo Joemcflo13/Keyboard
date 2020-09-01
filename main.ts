@@ -3,7 +3,7 @@
  * keyboards and text settings, so you can do what you want with your text
  */
 //%icon="\uf11c" color=#0344ab weight=95
-//% groups='["keyboards", "Text Settings", "Number keyboards"]'
+//% groups='["keyboards", "Number keyboards", "Text Settings"]'
 namespace Keyboard {
     /**
      * @param prompt type what you want to get prompted, eg: "WHAT DO YOU WANT TO ASK?"
@@ -658,12 +658,12 @@ namespace Keyboard {
      */
     //% bockId=numberspeed block="scroll speed $speed \\% number $prompt"
     //% speed.min=0 speed.max=900 group="Text Settings" color=#3251a6
-    export function numberspeed(speed: number, prompt: number): number {
-        return 0;
+    export function numberspeed(speed: number, prompt: number): void {
+        
     }
 
     /**
-     * 
+     * takes all the strings in the block and makes them faster
      */
     //% blockId=scrollspeed block="text speed everything to %speed \\% speed"
     //% speed.min=0 speed.max=900
@@ -677,5 +677,24 @@ namespace Keyboard {
      * @param prompt you can ask what you want but here is the example. eg: "WHAT DO YOU WANT TO ASK?"
      */
     //% blockId=numkeyboardprompt block="Number keyboard with prompt: $prompt"
+    //% group="Number Keyboards"
+    export function numberkeyboard(prompt: string): number {
+        basic.showString(prompt)
+        basic.showNumber(0)
+        while (true) {
+            if (input.buttonIsPressed(Button.A)) {
+                basic.clearScreen()
+                return 0;
+            } else if (input.buttonIsPressed(Button.B)) {
+                basic.showNumber(1)
+                while (true) {
+                    if (input.buttonIsPressed(Button.A)) {
+                        basic.clearScreen()
+                        return 1;
+                    }
+                }
+            }
+        }
+    }
 
 }
