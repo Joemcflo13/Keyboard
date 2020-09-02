@@ -691,10 +691,23 @@ namespace Keyboard {
                     if (input.buttonIsPressed(Button.A)) {
                         basic.clearScreen()
                         return 1;
+                    } else if (input.buttonIsPressed(Button.B)) {
+                        basic.showNumber(2)
+                        while (true) {
+                            if (input.buttonIsPressed(Button.A)) {
+                                basic.clearScreen()
+                                return 2;
+                            } else if (input.buttonIsPressed(Button.B)) {
+                                basic.showNumber(3)
+                                while (true) {
+                                    if (input.buttonIsPressed(Button.A)) {
+                                        basic.clearScreen()
+                                        return 3;
                     }
+                } 
                 }
             }
         }
     }
-
+    
 }
