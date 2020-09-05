@@ -640,39 +640,6 @@ namespace Keyboard {
     }
 
     /**
-     * change how fast the string speed is for one string. the higher it is, the slower it will get.
-     * @param speed change the speed by negative and positive
-     * @param speed change it by selcting it on the wheel. eg: 100
-     */
-    //% blockId=setspeed block="scroll speed $speed \\% string $prompt"
-    //% speed.min=0 speed.max=900
-    //% group="Text Settings"
-    //% color=#3251a6
-    export function textspeed(speed: number, prompt: string): void {  
-        basic.showString(prompt, speed)
-    }
-
-    /**
-     * this is the text scroll, but for numbers, and number keyboards
-     * @param prompt you can choose a number but this is the example. eg: 99
-     */
-    //% bockId=numberspeed block="scroll speed $speed \\% number $prompt"
-    //% speed.min=0 speed.max=900 group="Text Settings" color=#3251a6
-    export function numberspeed(speed: number, prompt: number): void {
-        
-    }
-
-    /**
-     * takes all the strings in the block and makes them faster
-     */
-    //% blockId=scrollspeed block="text speed everything to %speed \\% speed"
-    //% speed.min=0 speed.max=900
-    //% group="Text Settings" color=#3251a6
-    export function scrollspeed(speed: number, handler: () => void): void {
-        
-    }
-
-    /**
      * like a keyboard, but with numbers
      * @param prompt you can ask what you want but here is the example. eg: "WHAT DO YOU WANT TO ASK?"
      */
@@ -703,11 +670,253 @@ namespace Keyboard {
                                     if (input.buttonIsPressed(Button.A)) {
                                         basic.clearScreen()
                                         return 3;
-                    }
-                } 
+                                    } else if (input.buttonIsPressed(Button.B)) {
+                                        basic.showNumber(4)
+                                        while (true) {
+                                            if (input.buttonIsPressed(Button.A)) {
+                                                basic.clearScreen()
+                                                return 4;
+                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                basic.showNumber(5)
+                                                while (true) {
+                                                    if (input.buttonIsPressed(Button.A)) {
+                                                        basic.clearScreen()
+                                                        return 5;
+                                                    }  else if (input.buttonIsPressed(Button.B)) {
+                                                        basic.showNumber(6)
+                                                        while (true) {
+                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                basic.clearScreen()
+                                                                return 6;
+                                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                                basic.showNumber(7)
+                                                                while (true) {
+                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                        basic.clearScreen()
+                                                                        return 7;
+                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                        basic.showNumber(8)
+                                                                        while (true) {
+                                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                                basic.clearScreen()
+                                                                                return 8;
+                                                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                                                basic.showNumber(9)
+                                                                                while (true) {
+                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                        basic.clearScreen()
+                                                                                        return 9;
+                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                        basic.showNumber(10)
+                                                                                        while (true) {
+                                                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                                                basic.clearScreen()
+                                                                                                return 10;
+                                                                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                basic.showNumber(11)
+                                                                                                while (true) {
+                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                        basic.clearScreen()
+                                                                                                        return 11;
+                                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                        basic.showNumber(12)
+                                                                                                        while (true) {
+                                                                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                                                                basic.clearScreen()
+                                                                                                                return 12;
+                                                                                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                basic.showNumber(13)
+                                                                                                                while (true) {
+                                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                                        basic.clearScreen()
+                                                                                                                        return 13;
+                                                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                        basic.showNumber(14)
+                                                                                                                        while (true) {
+                                                                                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                                                                                basic.clearScreen()
+                                                                                                                                return 14;
+                                                                                                                                } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                                    basic.showNumber(15)
+                                                                                                                                    while (true) {
+                                                                                                                                        if (input.buttonIsPressed(Button.A)) {
+                                                                                                                                            basic.clearScreen()
+                                                                                                                                            return 15;
+                                                                                                                                            }  else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                                                basic.showNumber(16)
+                                                                                                                                                while (true) {
+                                                                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                                                                      basic.clearScreen()
+                                                                                                                                                      return 16;
+                                                                                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                                                        basic.showNumber(17)
+                                                                                                                                                        while (true) {
+                                                                                                                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                                                                                                                basic.clearScreen()
+                                                                                                                                                                return 17;
+                                                                                                                                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                                                                basic.showNumber(18)
+                                                                                                                                                                while (true) {
+                                                                                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                                                                                        basic.clearScreen()
+                                                                                                                                                                        return 18;
+                                                                                                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                                                                        basic.showNumber(19)
+                                                                                                                                                                        while (true) {
+                                                                                                                                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                                                                                                                                basic.clearScreen()
+                                                                                                                                                                                return 19;
+                                                                                                                                                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                                                                                basic.showNumber(20)
+                                                                                                                                                                                while (true) {
+                                                                                                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                                                                                                        basic.clearScreen()
+                                                                                                                                                                                        return 20;
+                                                                                                                                                                                    }  else if (input.buttonIsPressed(Button.B)) {
+                                                                                                                                                                                        basic.showNumber(21)
+                                                                                                                                                                                        while (true) {
+                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                    basic.clearScreen()
+                                                                                                    return 21;
+                                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                    basic.showNumber(22)
+                                                                                                    while (true) {
+                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                    basic.clearScreen()
+                                                                                                    return 22;
+                                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                    basic.showNumber(23)
+                                                                                                    while (true) {
+                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                      basic.clearScreen()
+                                                                                                    return 23;
+                                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                    basic.showNumber(24)
+                                                                                                    while (true) {
+                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                    basic.clearScreen()
+                                                                                                    return 24;
+                                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                                    basic.showNumber(25)
+                                                                                                    while (true) {
+                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                    basic.clearScreen()
+                                                                                                    return 25;
+                                                                                                    }  else if (input.buttonIsPressed(Button.B)) {
+                                                                                                    basic.showNumber(26)
+                                                                                                    while (true) {
+                                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                                    basic.clearScreen()
+                                                                                                    return 26;
+                                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                basic.showNumber(27)
+                                                                while (true) {
+                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                        basic.clearScreen()
+                                                                        return 27;
+                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                        basic.showNumber(28)
+                                                                        while (true) {
+                                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                                basic.clearScreen()
+                                                                                return 28;
+                                                                            } else if (input.buttonIsPressed(Button.B)) {
+                                                                                basic.showNumber(29)
+                                                                                while (true) {
+                                                                                    if (input.buttonIsPressed(Button.A)) {
+                                                                                        basic.clearScreen()
+                                                                                        return 29;
+                                                                                    } else if (input.buttonIsPressed(Button.B)) {
+                                                                                        basic.showNumber(30)
+                                                                                        while (true) {
+                                                                                            if (input.buttonIsPressed(Button.A)) {
+                                                                                                basic.clearScreen()
+                                                                                                return 30;
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }    
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } 
+                }
+            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }    
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } 
+                }
+            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }    
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } 
                 }
             }
         }
+    }
+
+    /**
+     * change how fast the string speed is for one string. the higher it is, the slower it will get.
+     * @param speed change the speed by negative and positive
+     * @param speed change it by selcting it on the wheel. eg: 100
+     */
+    //% blockId=setspeed block="scroll speed $speed \\% string $prompt"
+    //% speed.min=0 speed.max=900
+    //% group="Text Settings"
+    //% color=#3251a6
+    export function textspeed(speed: number, prompt: string): void {  
+        basic.showString(prompt, speed)
+    }
+
+    /**
+     * takes all the strings in the block and makes them faster
+     */
+    //% blockId=scrollspeed block="text speed everything to %speed \\% speed"
+    //% speed.min=0 speed.max=900
+    //% group="Text Settings" color=#3251a6
+    export function scrollspeed(speed: number, handler: () => void): void {
+        
     }
     
 }
