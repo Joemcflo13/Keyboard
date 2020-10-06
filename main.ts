@@ -1,4 +1,4 @@
-// please dont edit this. please.
+// Auto generated. please dont edit this. please.
 /**
  * keyboards and text settings, so you can do what you want with your text
  */
@@ -1162,6 +1162,20 @@ namespace Keyboard {
     //% color=#3251a6
     export function textspeed(speed: number, prompt: string): void {  
         basic.showString(prompt, speed)
+    }
+
+    /**
+     * change how fast the string speed is for one string. the higher it is, the slower it will get. but this one is in a string form
+     * @param speed change the speed by negative and positive
+     * @param speed change it by selcting it on the wheel. eg: 100
+     */
+    //% blockId=setspeedstring block="scroll speed $speed \\% string $prompt"
+    //% speed.min=0 speed.max=900
+    //% group="Text Settings" weight=40
+    //% color=#3251a6
+    export function textspeedstring(speed: number, prompt: string): string {  
+        basic.showString(prompt, speed)
+        return "";
     }
 
     /**
