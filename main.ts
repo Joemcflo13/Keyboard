@@ -1188,4 +1188,21 @@ namespace Keyboard {
         
     }
     
+    /**
+     * A two option choice that is based off of the buttons
+     */
+    //% blockId=button_assign block="Button options A & B"
+    //% group="keyboards" weight=93
+    export function button_assign(): void {
+
+    }
+    /**
+     * A three option choice that is based off of the buttons, like the button assign but with one more...
+     */
+    //% blockId=three_button_assign block="Button options A & B & A&B"
+    //% group="keyboards" weight=92
+    export function three_button_assign(): void {
+
+    }
+
 }
