@@ -1209,9 +1209,10 @@ namespace Keyboard {
      * A three option choice that is based off of the buttons, like the button assign but with one more...
      * @param str this is the string so you know what to do. eg: "WHAT DO YOU WANT TO ASK?"
      */
-    //% blockId=three_button_assign block="Button options A & B & A+B with prompt %str"
+    //% blockId=three_button_assign block="Button options A & B & A+B %tru with prompt %str"
     //% group="keyboards" weight=92
-    export function three_button_assign(str: string): boolean {
+    //% tru.shadow="toggleFalseTrue"
+    export function three_button_assign(str: string, tru: boolean): boolean {
         basic.showString(str)
         while (true) {
             if (input.buttonIsPressed(Button.A)) {
