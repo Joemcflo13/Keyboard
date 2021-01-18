@@ -1189,20 +1189,40 @@ namespace Keyboard {
     }
     
     /**
-     * A two option choice that is based off of the buttons
+     * A two option choice that is based off of the buttons, this boolean has a prompt, if you don't want the prompt, leave it blank. A = True, B = False.
+     * @param str this is a string to tell you what you need to know. eg: "WHAT DO YOU WANT TO ASK?"
      */
-    //% blockId=button_assign block="Button options A & B"
+    //% blockId=button_assign block="Button options A & B with prompt %str"
     //% group="keyboards" weight=93
-    export function button_assign(): void {
-
+    export function button_assign(str: string): boolean {
+        basic.showString(str)
+        while (true) {
+            if (input.buttonIsPressed(Button.A)) {
+                return true
+            } else if (input.buttonIsPressed(Button.B)) {
+                return false
+            } 
+        }
+        return false
     }
     /**
      * A three option choice that is based off of the buttons, like the button assign but with one more...
+     * @param str this is the string so you know what to do. eg: "WHAT DO YOU WANT TO ASK?"
      */
-    //% blockId=three_button_assign block="Button options A & B & A&B"
+    //% blockId=three_button_assign block="Button options A & B & A+B with prompt %str"
     //% group="keyboards" weight=92
-    export function three_button_assign(): void {
-
+    export function three_button_assign(str: string): boolean {
+        basic.showString(str)
+        while (true) {
+            if (input.buttonIsPressed(Button.A)) {
+                return true
+            } else if (input.buttonIsPressed(Button.B)) {
+                return false
+            } else if (input.buttonIsPressed(Button.AB)) {
+                
+            }  
+        }
+        return false
     }
 
 }
