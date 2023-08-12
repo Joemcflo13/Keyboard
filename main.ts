@@ -3,14 +3,14 @@
  * keyboards and text settings, so you can do what you want with your text
  */
 //%icon="\uf11c" color=#0344ab weight=95
-//% groups='["keyboards", "Number keyboards", "Text Settings"]'
+//% groups='["Keyboards", "Number keyboards", "Text Settings"]'
 namespace Keyboard {
     /**
      * @param prompt type what you want to get prompted, eg: "WHAT DO YOU WANT TO ASK?"
      * keyboard so you can write on screen with a prompt, when the letter pops up that you need to use, press a. Press b for the next letter.
      */
     //% blockId=textkeyboard block="Keyboard with prompt: $prompt" weight=100
-    //% group="keyboards"
+    //% group="Keyboards"
     export function textkey(prompt: string): string {
         basic.showString(prompt)
         basic.showString("A")
@@ -256,7 +256,7 @@ namespace Keyboard {
      * keyboard so you can write on screen without a prompt. when the letter pops up that you need to use, press a. Press b for the next letter.
      */
     //% blockId=justkeyboard block="Keyboard" weight=99
-    //% group="keyboards"
+    //% group="Keyboards"
     export function justkey(): string {
         basic.showString("A")
         while (true) {
@@ -501,7 +501,7 @@ namespace Keyboard {
      * keyboard with slang, or phrase, to help you, so if you have radio on you could send a text with a phrase so you can type faster. Press A to choose, press B to continue.
      */
     //% blockId=slang block="slang keyboard" weight=98
-    //% group="keyboards"
+    //% group="Keyboards"
     export function slang(): string {
         basic.showString("Yo!")
         while (true) {
@@ -532,7 +532,7 @@ namespace Keyboard {
      * just Y or N same with the other keyboards, A for Select, B for continue, this block has a prompt.
      */
     //% blockId=boolprompt block="Yes no prompt $prom" weight=97
-    //% group="keyboards"
+    //% group="Keyboards"
     export function boolprompt(prom: string): boolean {
         basic.showString(prom)
         basic.showString("Y")
@@ -559,7 +559,7 @@ namespace Keyboard {
      * just Y or N same with the other keyboards, A for Select, B for continue, this block has no prompt. 
      */
     //% blockId=bool block="Yes no boolean" weight=96
-    //% group="keyboards"
+    //% group="Keyboards"
     export function bool(): boolean {
         basic.showString("Y")
         while (true) {
@@ -587,7 +587,7 @@ namespace Keyboard {
      * @param lette this is the lette for the false statement. eg: "N"
      */
     //% blockId=twolett block="Ask for two letters: $lett | $lette" weight=95
-    //% group="keyboards"
+    //% group="Keyboards"
     export function twolett(lett: string, lette: string): boolean {
         basic.showString(lett)
         while (true) {
@@ -610,13 +610,13 @@ namespace Keyboard {
     }
 
     /**
-     * this block is just like the block befor it, but you can have a promt to it. and like every keyboard, you press a to select, and b to continue.
+     * this block is just like the block before it, but you can have a promt to it. and like every keyboard, you press a to select, and b to continue.
      * @param lett1 this is the true statement. eg: "Y"
      * @param lett2 this is the false statement. eg: "N"
      * @param prompt this is what ever you want to ask the user. eg: "ARE YOU SURE?"
      */
     //% blockId=twolettprompt block="ask for two letters: $lett1 | $lett2 with prompt: $prompt"
-    //% group="keyboards" weight=94
+    //% group="Keyboards" weight=94
     export function twolettprompt(lett1: string, lett2: string, prompt: string): boolean {
         basic.showString(prompt)
         basic.showString(lett1)
@@ -1181,7 +1181,7 @@ namespace Keyboard {
     /**
      * takes all the strings in the block and makes them faster
      */
-    //% blockId=scrollspeed block="text speed everything to %speed \\% speed"
+    //% blockId=scrollspeed block="Text speed everything to %speed \\% speed"
     //% speed.min=0 speed.max=900
     //% group="Text Settings" color=#3251a6
     export function scrollspeed(speed: number, handler: () => void): void {
@@ -1193,7 +1193,7 @@ namespace Keyboard {
      * @param str this is a string to tell you what you need to know. eg: "WHAT DO YOU WANT TO ASK?"
      */
     //% blockId=button_assign block="Button options A & B with prompt %str"
-    //% group="keyboards" weight=93
+    //% group="Keyboards" weight=93
     export function button_assign(str: string): boolean {
         basic.showString(str)
         while (true) {
@@ -1210,7 +1210,7 @@ namespace Keyboard {
      * @param str this is the string so you know what to do. eg: "WHAT DO YOU WANT TO ASK?"
      */
     //% blockId=three_button_assign block="Button options A & B & A+B %tru with prompt %str"
-    //% group="keyboards" weight=92
+    //% group="Keyboards" weight=92
     //% tru.shadow="toggleFalseTrue"
     export function three_button_assign(str: string, tru: boolean): boolean {
         basic.showString(str)
@@ -1224,6 +1224,61 @@ namespace Keyboard {
             }  
         }
         return false
+    }
+    /**
+     * Two options that are numbers
+     * @param numb1 This is the first number that returns 'true'. eg: 1
+     * @param numb2 This is the second number that returns 'false'. eg: 0
+     */
+    //% blockId=numb_bool block="Ask for two numbers: $numb1 | $numb2"
+    //% group="Number Keyboards" weight=99
+    export function numb_bool(numb1: number, numb2: number): boolean {
+        basic.showNumber(numb1)
+        while (true) {
+            if (input.buttonIsPressed(Button.A)) {
+                basic.clearScreen()
+                return true;
+            } else if (input.buttonIsPressed(Button.B)) {
+                basic.showNumber(numb2)
+                while (true) {
+                    if (input.buttonIsPressed(Button.A)) {
+                        basic.clearScreen()
+                        return false;
+                    } else if (input.buttonIsPressed(Button.B)) {
+                        basic.clearScreen()
+                        return false;
+                    }
+                }
+            }
+        }
+    }
+    /**
+     * Two options that are numbers but with the option of a prompt!
+     * @param numb1 This is the first number that returns 'true'. eg: 1
+     * @param numb2 This is the second number that returns 'false'. eg: 0
+     */
+    //% blockId=numb_boolPrompt block="Ask for two numbers: $numb1 | $numb2 with prompt: $prompt"
+    //% group="Number Keyboards" weight=99
+    export function numb_boolPrompt(numb1: number, numb2: number, prompt: string): boolean {
+        basic.showString(prompt)
+        basic.showNumber(numb1)
+        while (true) {
+            if (input.buttonIsPressed(Button.A)) {
+                basic.clearScreen()
+                return true;
+            } else if (input.buttonIsPressed(Button.B)) {
+                basic.showNumber(numb2)
+                while (true) {
+                    if (input.buttonIsPressed(Button.A)) {
+                        basic.clearScreen()
+                        return false;
+                    } else if (input.buttonIsPressed(Button.B)) {
+                        basic.clearScreen()
+                        return false;
+                    }
+                }
+            }
+        }
     }
 
 }
