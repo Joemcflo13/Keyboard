@@ -1231,7 +1231,7 @@ namespace Keyboard {
      * @param numb2 This is the second number that returns 'false'. eg: 0
      */
     //% blockId=numb_bool block="Ask for two numbers: $numb1 | $numb2"
-    //% group="Number Keyboards" weight=99
+    //% group="Number Keyboards" weight=45
     export function numb_bool(numb1: number, numb2: number): boolean {
         basic.showNumber(numb1)
         while (true) {
@@ -1258,7 +1258,7 @@ namespace Keyboard {
      * @param numb2 This is the second number that returns 'false'. eg: 0
      */
     //% blockId=numb_boolPrompt block="Ask for two numbers: $numb1 | $numb2 with prompt: $prompt"
-    //% group="Number Keyboards" weight=99
+    //% group="Number Keyboards" weight=46
     export function numb_boolPrompt(numb1: number, numb2: number, prompt: string): boolean {
         basic.showString(prompt)
         basic.showNumber(numb1)

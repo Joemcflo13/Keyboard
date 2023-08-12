@@ -3,8 +3,7 @@
     "version": "2.4.0",
     "description": "use this extention to type what you need to say.",
     "dependencies": {
-        "core": "*",
-        "microphone": "*"
+        "core": "*"
     },
     "files": [
         "main.ts",
